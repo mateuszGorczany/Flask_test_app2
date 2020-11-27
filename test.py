@@ -18,7 +18,7 @@ class TestApp(unittest.TestCase):
     def test_greet(self):
         rv = self.app.get("/greet/")
         self.assertEqual(rv.status, "200 OK")
-        self.assertEqual(rv.data, f"Witaj\n")
+        self.assertEqual(rv.data, b"Witaj\n")
 
     def test_greet_user(self):
         name = "Mateusz"
