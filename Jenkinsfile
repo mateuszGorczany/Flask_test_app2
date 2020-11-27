@@ -16,6 +16,7 @@ pipeline {
     stage('Deliver') {
       steps {
         sh 'python app.py'
+        sh 'pkill -f app.py'
       }
     }
 
